@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Music2, PartyPopper, Sparkles, Volume2, VolumeX, Cake, Heart, Guitar, Star, ChevronDown } from "lucide-react";
+import { Music2, PartyPopper, Sparkles, Cake, Heart, Guitar, Star, ChevronDown } from "lucide-react";
 
 const stats = [
   { label: "Nivel de recocha", value: "Legendario", score: 100 },
@@ -13,16 +13,12 @@ const stats = [
 export default function Home() {
   const [entered, setEntered] = useState(false);
   const [message, setMessage] = useState(false);
-  const [musicOn, setMusicOn] = useState(false);
 
   return (
     <main>
       <div className="grain" aria-hidden="true" />
       <nav className="topbar">
         <a className="brand" href="#inicio"><span className="brand-mark">JJ</span><span>LA PARRANDA <b>42</b></span></a>
-        <button className="sound-toggle" onClick={() => setMusicOn(!musicOn)} aria-label={musicOn ? "Desactivar ambiente" : "Activar ambiente"}>
-          {musicOn ? <Volume2 size={16}/> : <VolumeX size={16}/>}<span>{musicOn ? "AMBIENTE ACTIVADO" : "ACTIVAR AMBIENTE"}</span>
-        </button>
       </nav>
 
       <section className="hero" id="inicio">
