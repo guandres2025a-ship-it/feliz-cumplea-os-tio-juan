@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import MusicPlayer from "../components/MusicPlayer";
 
 export const metadata: Metadata = {
   title: "Juan José 42 — La parranda",
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body><MusicPlayer />{children}</body>
     </html>
   );
 }
